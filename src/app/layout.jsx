@@ -12,8 +12,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.variable} ${lobster.variable} bg-degrade2 bg-no-repeat w-full min-h-screen`}>
+    <html lang="pt-br">
+      <body className={`${montserrat.variable} ${lobster.variable} w-full min-h-screen bg-light`}>
      
      <NavBar/>
      {children}
