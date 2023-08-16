@@ -25,8 +25,8 @@ export default function NavBar() {
                     icon={faHome}
                 />
                 <CustonLink
-                    link="#"
-                    title="Sobre"
+                    link="/quem-somos"
+                    title="Quem Somos"
                     icon={faUser}
                 />
                 <Link href="/">
@@ -35,12 +35,12 @@ export default function NavBar() {
                     />
                 </Link>
                 <CustonLink
-                    link='#'
+                    link='/carrinho'
                     title='Carrinho'
                     icon={faShoppingCart}
                 />
                 <CustonLink
-                    link='#'
+                    link='/fale-conosco'
                     title='Atendimento'
                     icon={faComments}
                 />
