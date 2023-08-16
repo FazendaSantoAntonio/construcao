@@ -18,11 +18,59 @@ const Card = ({ foto, titulo, preco, precoav }) => {
     )
 }
 
-export default function Destaques() {
+export default function Produtos() {
     return (
         <div className="flex flex-col justify-center items-center p-16">
-            <h2 className="text-primary font-bold text-4xl">Destaques</h2>
+            <h2 className="text-primary font-bold text-4xl">Produtos</h2>
             <div className="mt-10 flex flex-wrap justify-center gap-5 px-16">
+                <Card
+                    foto={img}
+                    titulo="Queijo"
+                    preco="100,00"
+                    precoav="90,00"
+                />
+                <Card
+                    foto={img}
+                    titulo="Queijo"
+                    preco="100,00"
+                    precoav="90,00"
+                />
+                <Card
+                    foto={img}
+                    titulo="Queijo"
+                    preco="100,00"
+                    precoav="90,00"
+                />
+                <Card
+                    foto={img}
+                    titulo="Queijo"
+                    preco="100,00"
+                    precoav="90,00"
+                />
+                <Card
+                    foto={img}
+                    titulo="Queijo"
+                    preco="100,00"
+                    precoav="90,00"
+                />
+                <Card
+                    foto={img}
+                    titulo="Queijo"
+                    preco="100,00"
+                    precoav="90,00"
+                />
+                <Card
+                    foto={img}
+                    titulo="Queijo"
+                    preco="100,00"
+                    precoav="90,00"
+                />
+                <Card
+                    foto={img}
+                    titulo="Queijo"
+                    preco="100,00"
+                    precoav="90,00"
+                />
                 <Card
                     foto={img}
                     titulo="Queijo"

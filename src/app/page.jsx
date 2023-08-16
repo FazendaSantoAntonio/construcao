@@ -1,11 +1,15 @@
 import Image from "next/image";
 import queijo from "../../public/queijo.jpg"
 import Destaques from "./components/Destaques";
+import Promocao from "./components/Promocao";
+import Produtos from "./components/Produtos";
+import Blog from "./components/Blog";
+
 
 export default function Home() {
   return (
     <div className="">
-      <div className="w-screen h-[500px] flex flex-col justify-center items-start relative">
+      <div className="w-screen h-[600px] flex flex-col justify-center items-start relative">
         <h1 className="ml-32 text-primary font-black text-5xl w-[500px] uppercase">
           <span className="text-secondary">Queijos </span> Artesanais de Alagoa.
         </h1>
@@ -16,6 +20,9 @@ export default function Home() {
         <Image src={queijo} alt="queijo" className="w-full h-full absolute -z-10" />
       </div>
       <Destaques />
+      <Promocao/>
+      <Produtos/>
+      <Blog/>
     </div>
   )
 }

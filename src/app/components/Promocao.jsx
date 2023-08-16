@@ -18,10 +18,10 @@ const Card = ({ foto, titulo, preco, precoav }) => {
     )
 }
 
-export default function Destaques() {
+export default function Promocao() {
     return (
-        <div className="flex flex-col justify-center items-center p-16">
-            <h2 className="text-primary font-bold text-4xl">Destaques</h2>
+        <div className="flex flex-col justify-center items-center p-16 bg-white">
+            <h2 className="text-primary font-bold text-4xl">Promocão</h2>
             <div className="mt-10 flex flex-wrap justify-center gap-5 px-16">
                 <Card
                     foto={img}
