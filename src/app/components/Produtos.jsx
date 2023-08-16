@@ -1,5 +1,6 @@
 import Image from "next/image"
 import img from "../../../public/queijo.jpg"
+import Link from "next/link"
 
 const Card = ({ foto, titulo, preco, precoav }) => {
     return (
@@ -12,7 +13,7 @@ const Card = ({ foto, titulo, preco, precoav }) => {
             </div>
             <div className="flex gap-5 my-5">
                 <button className="flex justify-center items-center bg-primary text-secondary font-bold px-5 py-2 rounded border-2 border-secondary hover:text-primary hover:bg-secondary transition-all duration-300">Compre</button>
-                <button className="flex justify-center items-center bg-secondary text-primary font-bold px-5 py-2 rounded border-2 border-secondary hover:text-secondary hover:bg-primary transition-all duration-300">Detalhes</button>
+                <Link href="/detalhes" className="flex justify-center items-center bg-secondary text-primary font-bold px-5 py-2 rounded border-2 border-secondary hover:text-secondary hover:bg-primary transition-all duration-300">Detalhes</Link>
             </div>
         </div>
     )
