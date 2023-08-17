@@ -23,9 +23,9 @@ export default function Home() {
         <Image src={queijo} alt="queijo" className="opacity-80 md w-full h-full absolute -z-10" />
       </div>
       <Destaques />
-      {/*<Promocao />
+      <Promocao />
       <Produtos />
-      <Blog />*/}
+      <Blog />
     </div>
   )
 }

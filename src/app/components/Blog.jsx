@@ -19,9 +19,9 @@ const Card = ({ foto, titulo, texto }) => {
 
 export default function Blog() {
     return (
-        <div className="flex flex-col justify-center items-center p-16 bg-white">
+        <div className="flex flex-col justify-center items-center py-16 md:p-16 bg-white">
             <h2 className="text-primary font-bold text-4xl">Blog</h2>
-            <div className="mt-10 flex flex-wrap justify-center gap-5 px-16">
+            <div className="mt-10 flex flex-wrap justify-center gap-5 md:px-16">
                 <Card
                     foto={img}
                     titulo="Lorem"
