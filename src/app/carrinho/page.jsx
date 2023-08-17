@@ -61,7 +61,7 @@ export default function Carrinho() {
             <div className="flex  items-center p-5 bg-primary/20 w-[992px] border-x border-b border-primary">
                 <p className="font-bold mr-2">Calcule o Frete:</p> 
                 <input type="text" className="p-2" placeholder="digite o seu CEP"/> 
-                <button className="flex justify-center items-center bg-primary text-secondary font-bold px-5 py-2 rounded border-2 border-secondary hover:text-primary hover:bg-secondary transition-all duration-300">Calcular <FontAwesomeIcon icon={faTruckFast}/></button>
+                <button className="flex justify-center items-center bg-primary text-secondary font-bold px-5 py-2 rounded border-2 border-secondary hover:text-primary hover:bg-secondary transition-all duration-300">Calcular <FontAwesomeIcon icon={faTruckFast} className="ml-2"/></button>
             </div>
             <div className="w-[992px] flex justify-end items-end border-x border-b border-primary p-2">
                 <p>Total: <span className="font-bold text-2xl">R$90,00</span> </p>

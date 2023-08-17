@@ -11,7 +11,7 @@ export default function Footer() {
 
     return (
         <div className="flex flex-col justify-center items-center ">
-            <div className="bg-secondary flex items- justify-center p-16 text-primary w-full">
+            <div className="bg-secondary flex flex-col md:flex-row items- justify-center p-16 text-primary w-full">
                 <div className="flex flex-col justify-center items-center mr-20">
                     <Image src={logo} width={100} />
                     <p className="w-64 text-justify text-sm mt-5 ">Descubra o incrível universo lúdico da Marcio Artezanatos! Loja especializada em produtos sustentáveis e produzidos por empresas brasileiras, resgatamos memórias e histórias, proporcionando aprendizagens significativas para todas as idades. Com jogos, brinquedos em madeira, livros e quebra-cabeças, estimulamos a imaginação, criatividade e o desenvolvimento integral das crianças. Venha explorar nosso mundo encantado e transforme o aprendizado em uma experiência mágica.</p>
@@ -50,8 +50,8 @@ export default function Footer() {
                 </div>
 
             </div>
-            <div className=" w-full text-primary flex flex-col items-center justify-center text-center">
-                <p className="text-xs">
+            <div className=" w-full pt-5 text-primary flex flex-col items-center justify-center text-center">
+                <p className="text-xs ">
                     Fazenda-CNPJ: 0000000000000000000000000 Todos os Direitos Reservados, {ano}
                 </p>
                 <div className="flex">
