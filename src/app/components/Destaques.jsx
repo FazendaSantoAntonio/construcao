@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const Card = ({ foto, titulo, preco, precoav }) => {
     return (
-        <div className="text-primary flex flex-col justify-center items-center  w-64 bg-primary/20 rounded shadow-lg shadow-black/40">
+        <div className="text-primary flex flex-col justify-center items-center w-64 bg-primary/20 rounded shadow-lg shadow-black/40">
             <Image src={foto} alt={titulo} className="rounded" />
             <div className="mt-5 flex flex-col justify-center items-center">
                 <span className="font-bold text-xl">{titulo}</span>
@@ -23,7 +23,7 @@ export default function Destaques() {
     return (
         <div className="flex flex-col justify-center items-center p-16">
             <h2 className="text-primary font-bold text-4xl">Destaques</h2>
-            <div className="mt-10 flex flex-wrap justify-center gap-5 px-16">
+            <div className="mt-10 flex flex-wrap justify-center gap-5 md:px-16">
                 <Card
                     foto={img}
                     titulo="Queijo"
