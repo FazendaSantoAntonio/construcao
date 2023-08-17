@@ -12,6 +12,7 @@ export default function Carrinho() {
         <div>
             {/*carrinho web */}
             <div className="hidden mx-16 my-16 md:flex flex-col justify-center items-center ">
+                <p><span className="font-bold text-xl text-primary">Carrinho</span> Clique em finalizar compra para efetuar o seu pedido.</p>
                 <div className="shadow-sm shadow-primary flex bg-primary/20 border border-primary text-primary">
                     <h2 className="uppercase font-bold border-r border-primary w-72 p-2">
                         Produto
@@ -73,7 +74,8 @@ export default function Carrinho() {
             {/*carrinho mobile */}
             <div>
                 <div className="flex flex-col justify-center items-center md:hidden px-5 pt-10">
-                    <h2 className="text-bold text-xl pb-5">Carrinho</h2>
+                <span className="font-bold  text-primary">Carrinho</span>
+                <p className="text-sm w-44 text-primary/75"> Clique em finalizar compra para efetuar o seu pedido.</p>
                     <ItemCarrinhoMobile
                         foto={queijo}
                         titulo="Queijo"

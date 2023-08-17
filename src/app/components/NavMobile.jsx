@@ -8,6 +8,7 @@ import {
     faPeopleGroup,
     faLock,
     faHome,
+    faCheese,
 } from '@fortawesome/free-solid-svg-icons'
 import logo from '../../../public/logo.png'
 
@@ -20,7 +21,7 @@ export default function NavMobile() {
         <div className='bg-secondary  flex justify-around md:hidden'>
             <div className=' flex justify-around items-center py-1 w-screen'>
                 <div className='flex justify-center items-center'>
-                    <Image src={logo}  alt="logo da Fazenda Santo Antônio"
+                    <Image src={logo} alt="logo da Fazenda Santo Antônio"
                         className="rounded-full w-16"
                     />
                 </div>
@@ -71,6 +72,14 @@ export default function NavMobile() {
                 >
                     <FontAwesomeIcon icon={faComments} className="h-5 text-vermelho" />
                     <p>Atendimento</p>
+                </Link>
+                <Link
+                    href="quem-somos"
+                    className=" text-yellow1 flex cursor-pointer items-center space-x-5 p-2 pl-5 text-sm font-semibold text-vermelho shadow-lg duration-300 ease-in-out hover:text-light"
+                    onClick={() => setShowSidebar(!showSidebar)}
+                >
+                    <FontAwesomeIcon icon={faCheese} className="h-5 text-vermelho" />
+                    <p>Produtos</p>
                 </Link>
                 <Link
                     href="/carrinho"
