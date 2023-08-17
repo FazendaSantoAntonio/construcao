@@ -24,10 +24,10 @@ export default function Footer() {
                     <Link href="quem-somos" className="hover:text-light transition-all duration-300">Quem Somos?</Link>
                 </div>
 
-                <div className="flex flex-col my-10 md:my-0 justify-start items-center mr-20 text-center">
+                <div className="flex flex-col my-10 md:my-0 justify-center w-full md:justify-start items-center mr-20 text-center">
                     <Link href="https://wa.me/5535998647172" target="_blank" className="flex items-center hover:text-light transition-all duration-300">
-                        <FontAwesomeIcon icon={faWhatsapp} className="text-2xl h-6 mr-2" />
-                        Whatsapp:+55 35 9864-7172
+                        
+                    <FontAwesomeIcon icon={faWhatsapp} className="text-2xl h-6 mr-" /> +55 35 9864-7172
                     </Link>
                 </div>
                
