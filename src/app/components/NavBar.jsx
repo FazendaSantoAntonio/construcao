@@ -18,7 +18,7 @@ const CustonLink = ({ title, icon, link }) => {
 export default function NavBar() {
     return (
         <div>
-            <div className="flex text-center justify-center items-center bg-primary text-light ">
+            <div className="flex text-center justify-center items-center bg-primary text-light w-screen">
                 Frete Grátis nas compras acima de R$ 300,00
             </div>
             <NavMobile />
@@ -50,7 +50,7 @@ export default function NavBar() {
                     icon={faComments}
                 />
             </nav>
-            <nav className="hidden md:flex flex-wrap px-16 space-x-10 justify-center items-center bg-primary text-light py-2">
+            <nav className="hidden md:flex flex-wrap w-screen px-16 space-x-10 justify-center items-center bg-primary text-light py-2">
                 <Link href="#" className="hover:text-secondary transition-all duration-300">
                     Queijo
                 </Link>
