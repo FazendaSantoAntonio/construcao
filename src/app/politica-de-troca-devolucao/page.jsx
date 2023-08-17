@@ -1,6 +1,6 @@
 export default function PoliticaDeTrocaDevolucao() {
     return (
-        <div className="flex flex-col  p-16 text-primary bg-light">
+        <div className="flex flex-col py-16 px-5 md:p-16 text-primary bg-light">
             <h2 className="text-4xl font-bold flex justify-center items-center w-full py-10">Política de Troca e Devolução</h2>
             <p>
                 ATENÇÃO: Antes de devolver um produto, entre em contato por e-mail contato@apontee.com.br ou WhatsApp (41)99275-8932.

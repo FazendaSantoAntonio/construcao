@@ -1,6 +1,6 @@
 export default function QuemSomos() {
     return (
-        <div className="flex flex-col  p-16 text-primary bg-light">
+        <div className="flex flex-col px-5 py-16  md:p-16 text-primary bg-light">
             <h2 className="text-4xl font-bold flex justify-center items-center w-full py-10">Quem Somos</h2>
             <p>
                 Bem-vindas (os) À Marcio Artesanatos!

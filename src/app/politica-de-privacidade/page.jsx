@@ -1,6 +1,6 @@
 export default function PoliticaDePrivacidade() {
     return (
-        <div className="flex flex-col justify-center items-center p-16 text-primary bg-light">
+        <div className="flex flex-col justify-center items-center py-16 px-5 md:p-16 text-primary bg-light">
             <h2 className="text-4xl font-bold  py-10">Política de Privacidade</h2>
             <p>
                 A Pontee Brinquedos Educativos, pessoa jurídica de direito privado leva a sua privacidade a sério e zela pela segurança e proteção de dados de todos os seus clientes, parceiros, fornecedores e usuários do site domínio https://www.aponteebrinquedos.com.br/ e qualquer outro site, loja ou aplicativo operado pelo lojista.
