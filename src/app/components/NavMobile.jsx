@@ -17,11 +17,11 @@ export default function NavMobile() {
     const [showSidebar, setShowSidebar] = useState(false)
 
     return (
-        <div className='bg-secondary py-5 flex justify-around md:hidden'>
-            <div className=' flex justify-around w-screen'>
+        <div className='bg-secondary  flex justify-around md:hidden'>
+            <div className=' flex justify-around items-center py-1 w-screen'>
                 <div className='flex justify-center items-center'>
                     <Image src={logo}  alt="logo da Fazenda Santo Antônio"
-                        className="rounded-full w-10"
+                        className="rounded-full w-16"
                     />
                 </div>
                 <svg

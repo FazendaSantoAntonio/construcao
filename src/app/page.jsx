@@ -22,8 +22,8 @@ export default function Home() {
         </button>
         <Image src={queijo} alt="queijo" className="opacity-80 md w-full h-full absolute -z-10" />
       </div>
-      {/*<Destaques />
-      <Promocao />
+      <Destaques />
+      {/*<Promocao />
       <Produtos />
       <Blog />*/}
     </div>
