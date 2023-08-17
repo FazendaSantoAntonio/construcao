@@ -23,7 +23,7 @@ export default function Produtos() {
     return (
         <div className="flex flex-col justify-center items-center py-16 md:p-16">
             <h2 className="text-primary font-bold text-4xl">Produtos</h2>
-            <div className="mt-10 flex flex-wrap justify-center gap-5 md:px-16">
+            <div className="mt-10 flex flex-wrap justify-center gap-12 md:gap-5 md:px-16">
                 <Card
                     foto={img}
                     titulo="Queijo"
