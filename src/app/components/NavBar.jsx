@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComments, faHome, faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import NavMobile from "./NavMobile";
+import { faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 
 const CustonLink = ({ title, icon, link }) => {
@@ -18,11 +19,27 @@ const CustonLink = ({ title, icon, link }) => {
 export default function NavBar() {
     return (
         <div>
-            <div className="flex text-center justify-center items-center bg-primary text-light w-screen">
-                Frete Grátis nas compras acima de R$ 300,00
+            <div className="fixed flex justify-between items-center px-5 bg-light w-screen z-10 backdrop-blur-md top-0">
+                <div className="space-x-5 p-2 divide-primary/75 divide-x flex">
+                    <Link href="https://www.instagram.com/queijofazendasantoantonio/"
+                        target="_blank" className="text-black/75 hover:text-primary transition-all duration-300 flex justify-center items-center">
+                        <FontAwesomeIcon icon={faInstagram} className="mr-2" />
+                        Instagram
+                    </Link>
+                    <Link href="https://www.facebook.com/queijofazendasantoantonio"
+                        target="_blank" className="flex justify-center items-center text-black/75 hover:text-primary transition-all duration-300 pl-5">
+                        <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+                        Facebook
+                    </Link>
+                </div>
+                <div>
+                    <Link href="https://wa.me/+553598647172" className="flex justify-center items-center hover:text-primary transition-all duration-300 text-black/75"><FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-2" />+55 35 9864-7172</Link>
+                </div>
             </div>
+
             <NavMobile />
-            <nav className="hidden md:flex w-screen bg-secondary justify-center items-center h-36">
+
+            <nav className="hidden md:flex w-screen bg-secondary justify-center items-center h-36 mt-10">
 
                 <CustonLink
                     link="/"
