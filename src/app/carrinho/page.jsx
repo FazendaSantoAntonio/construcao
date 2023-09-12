@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import queijo from "../../../public/queijo.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 import ItemCarrinho from "../components/ItemCarrinho";
@@ -32,29 +31,14 @@ export default function Carrinho() {
                 </div>
                 <div>
                     <ItemCarrinho
-                        foto={queijo}
+                        // foto={queijo}
                         titulo="Queijo"
                         sku="000000"
                         estoque="Disponivel"
                         preco="100,00"
                         subtotal="100,00"
                     />
-                    <ItemCarrinho
-                        foto={queijo}
-                        titulo="Queijo"
-                        sku="000000"
-                        estoque="Disponivel"
-                        preco="100,00"
-                        subtotal="100,00"
-                    />
-                    <ItemCarrinho
-                        foto={queijo}
-                        titulo="Queijo"
-                        sku="000000"
-                        estoque="Disponivel"
-                        preco="100,00"
-                        subtotal="100,00"
-                    />
+                    
                 </div>
                 <div className="flex justify-end items-end w-[992px] border-x border-b border-primary bg-primary/20 p-2">
                     <p>Subtotal: <span className="font-bold">90,00</span> </p>
@@ -77,29 +61,14 @@ export default function Carrinho() {
                 <span className="font-bold  text-primary">Carrinho</span>
                 <p className="text-sm w-44 text-primary/75"> Clique em finalizar compra para efetuar o seu pedido.</p>
                     <ItemCarrinhoMobile
-                        foto={queijo}
+                        // foto={queijo}
                         titulo="Queijo"
                         sku="000000"
                         estoque="Disponivel"
                         preco="100,00"
                         subtotal="100,00"
                     />
-                    <ItemCarrinhoMobile
-                        foto={queijo}
-                        titulo="Queijo"
-                        sku="000000"
-                        estoque="Disponivel"
-                        preco="100,00"
-                        subtotal="100,00"
-                    />
-                    <ItemCarrinhoMobile
-                        foto={queijo}
-                        titulo="Queijo"
-                        sku="000000"
-                        estoque="Disponivel"
-                        preco="100,00"
-                        subtotal="100,00"
-                    />
+                   
                 </div>
                 <div className="flex flex-col gap-5 items-center p-5 bg-primary/20 ">
                     <p className="font-bold mr-2">Calcule o Frete:</p>

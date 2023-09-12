@@ -1,5 +1,4 @@
 import Image from "next/image"
-import img from "../../../public/queijo.jpg"
 import Link from "next/link"
 
 const Card = ({ foto, titulo, preco, precoav }) => {
@@ -25,73 +24,7 @@ export default function Produtos() {
             <h2 className="text-primary font-bold text-4xl">Produtos</h2>
             <div className="mt-10 flex flex-wrap justify-center gap-12 md:gap-5 md:px-16">
                 <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
-                <Card
-                    foto={img}
+                    // foto={img}
                     titulo="Queijo"
                     preco="100,00"
                     precoav="90,00"

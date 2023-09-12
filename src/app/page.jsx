@@ -1,5 +1,4 @@
 import Image from "next/image";
-import queijo from "../../public/queijo.jpg"
 import Destaques from "./components/Destaques";
 import Promocao from "./components/Promocao";
 import Produtos from "./components/Produtos";
@@ -20,7 +19,7 @@ export default function Home() {
         <button className="ml-10 md:ml-32 mt-10 flex justify-center items-center bg-primary text-secondary font-bold px-5 py-2 rounded border-2 border-secondary hover:text-primary hover:bg-secondary transition-all duration-300 mb-5">
           Compre
         </button>
-        <Image src={queijo} alt="queijo" className="opacity-80 md w-full h-full absolute -z-10" />
+        {/* <Image src={queijo} alt="queijo" className="opacity-80 md w-full h-full absolute -z-10" /> */}
       </div>
       <Destaques />
       <Promocao />

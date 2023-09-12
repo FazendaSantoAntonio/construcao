@@ -1,5 +1,4 @@
 "use client"
-import image from '../../../public/queijo.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import CarrosselDetalhes from '../components/CarrosselDetalhes';
@@ -15,7 +14,7 @@ export default function Detalhes() {
     <div className="p-16 bg-light">
       <div className="flex justify-center rounded-lg p-10 ">
         <div className="flex items-center justify-center  h-full">
-          <CarrosselDetalhes primeira={image} segunda={image} terceira={image} title="foto de um foguete" />
+          {/* <CarrosselDetalhes primeira={image} segunda={image} terceira={image} title="foto de um foguete" /> */}
         </div>
         <div className=" w-[40%] text-primary">
           <h2 className="text-5xl pb-2 border-b-2 border-primary font-bold">Foguete</h2>
