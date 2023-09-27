@@ -1,12 +1,51 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
+import React, { useEffect, useState } from "react"
+import { db } from "../../../config/firebase"
+import { collection, getDocs } from 'firebase/firestore';
+import { faStar } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const Card = ({ foto, titulo, preco, precoav }) => {
+
+function calculateAverageRating(ratings) {
+    if (!ratings || ratings.length === 0) {
+      return 0; // Se não houver avaliações ou se ratings for undefined, a média é 0.
+    }
+  
+    // const totalRating = ratings.reduce((acc, rating) => acc + rating, 0);
+    const averageRating = ratings.length;
+    return averageRating;
+  }
+  
+  function StarRating({ rating }) {
+    const numStars = 5;
+    const filledStars = Math.floor(rating);
+  
+    const starIcons = [];
+    for (let i = 0; i < numStars; i++) {
+      if (i < filledStars) {
+        starIcons.push(
+          <FontAwesomeIcon key={i} icon={faStar} className="text-yellow-500" />
+        );
+      } else {
+        starIcons.push(
+          <FontAwesomeIcon key={i} icon={faStar} className="text-zinc-300" />
+        );
+      }
+    }
+  
+    return <div className="flex">{starIcons}</div>;
+  }
+
+const Card = ({ foto, titulo, preco, precoav,ratings, }) => {
+    const averageRating = calculateAverageRating(ratings);
     return (
         <div className="text-primary flex flex-col justify-center items-center  w-64 bg-primary/20 rounded shadow-lg shadow-black/40">
-            <Image src={foto} alt={titulo} className="rounded" />
+            <Image src={foto} alt={titulo} height={300} width={300} className="rounded" />
             <div className="mt-5 flex flex-col justify-center items-center">
                 <span className="font-bold text-xl">{titulo}</span>
+                <StarRating rating={averageRating} />
                 <span className="font-bold text-xl text-orange-500">R${preco}</span>
                 <span>à vista R$ <span className="text-orange-500 font-bold">{precoav}</span></span>
             </div>
@@ -18,17 +57,102 @@ const Card = ({ foto, titulo, preco, precoav }) => {
     )
 }
 
+function DatabaseRead({ currentPage, itemsPerPage }) {
+    const [produto, setProduto] = useState([]);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+  
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          async function getProduto() {
+            const dataCollection = collection(db, "produtos");
+            const dataSnapshot = await getDocs(dataCollection);
+            const dataList = dataSnapshot.docs.map((doc) => doc.data());
+            setProduto(dataList.slice(startIndex, endIndex)); // Filtra os itens da página atual
+          }
+          getProduto();
+        } catch (error) {
+          console.error("Erro:", error);
+        }
+      }
+  
+      fetchData();
+    }, [currentPage]);
+  
+
+    return (
+        <div className='flex flex-wrap gap-5'>
+      {produto.map((item) => {
+        console.log(item.imagens)
+        if (Array.isArray(item.imagens) && item.imagens.length > 0) {
+          const primeiroLink = item.imagens[0];
+          return (
+            <Card
+              key={item.id}
+              title={item.produto}
+              preco={item.valor}
+              foto={primeiroLink}
+              ratings={item.avaliacao}
+              href="/compra"
+            />
+          );
+        }
+      })}
+    </div>
+  );
+}
+const Pagination = ({ currentPage, totalPages, setCurrentPage }) => {
+    const pages = [...Array(totalPages).keys()].map((page) => page + 1);
+  
+    return (
+      <div className="pagination space-x-5 ">
+        {pages.map((page) => (
+         <button
+         key={page}
+         onClick={() => setCurrentPage(page)}
+         className={`px-4 py-2 rounded-full mr-2 
+           ${currentPage === page ? 'bg-primary text-white' : 'bg-white text-secondary hover:bg-secondary'}
+         `}
+       >
+         {page}
+       </button>
+        ))}
+      </div>
+    );
+  };
+  
 export default function Produtos() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
+    const [totalPages, setTotalPages] = useState(1);
+  
+    useEffect(() => {
+        async function fetchTotalItems() {
+          try {
+            const dataCollection = collection(db, "produtos");
+            const dataSnapshot = await getDocs(dataCollection);
+            const totalItems = dataSnapshot.docs.length;
+            const calculatedTotalPages = Math.ceil(totalItems / itemsPerPage);
+            setTotalPages(calculatedTotalPages);
+          } catch (error) {
+            console.error("Erro ao obter total de itens:", error);
+          }
+        }
+    
+        fetchTotalItems();
+      }, []);
     return (
         <div className="flex flex-col justify-center items-center py-16 md:p-16">
+            
             <h2 className="text-primary font-bold text-4xl">Produtos</h2>
             <div className="mt-10 flex flex-wrap justify-center gap-12 md:gap-5 md:px-16">
-                <Card
-                    // foto={img}
-                    titulo="Queijo"
-                    preco="100,00"
-                    precoav="90,00"
-                />
+            <DatabaseRead currentPage={currentPage} itemsPerPage={itemsPerPage} />
+                <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                setCurrentPage={setCurrentPage}
+              />
             </div>
         </div>
     )
