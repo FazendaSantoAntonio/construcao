@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "../../../public/logo.png"
+import logor from "../../../public/logor.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComments, faHome, faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
@@ -44,7 +45,7 @@ export default function NavBar() {
 
             <NavMobile />
 
-            <nav className="hidden md:flex w-screen bg-secondary justify-center items-center h-36 mt-10">
+            <nav className="hidden md:flex w-screen bg-secondary justify-center items-end h-28 mt-10">
 
                 <CustonLink
                     link="/"
@@ -57,8 +58,8 @@ export default function NavBar() {
                     icon={faUser}
                 />
                 <Link href="/">
-                    <Image src={logo} width={150} alt="logo da Fazenda Santo Antônio"
-                        className="rounded-full hidden md:block"
+                    <Image src={logor} width={250} alt="logo da Fazenda Santo Antônio"
+                        className="rounded-full hidden md:block -mt-24"
                     />
                 </Link>
                 <CustonLink
