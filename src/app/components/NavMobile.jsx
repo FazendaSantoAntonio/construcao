@@ -11,7 +11,7 @@ import {
     faCheese,
 } from '@fortawesome/free-solid-svg-icons'
 import logo from '../../../public/logo.png'
-import logor from '../../../public/logor.png'
+
 
 import { useState } from 'react'
 import Image from 'next/image'
@@ -22,7 +22,7 @@ export default function NavMobile() {
         <div className='bg-secondary  flex justify-around md:hidden mt-10'>
             <div className=' flex justify-around items-center py-1 w-screen'>
                 <div className='flex justify-center items-center'>
-                    <Image src={logor} alt="logo da Fazenda Santo Antônio"
+                    <Image src={logo} alt="logo da Fazenda Santo Antônio"
                         className="rounded-full w-28 py-2"
                     />
                 </div>

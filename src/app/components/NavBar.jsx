@@ -1,6 +1,5 @@
 import Image from "next/image";
 import logo from "../../../public/logo.png"
-import logor from "../../../public/logor.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComments, faHome, faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
@@ -58,8 +57,8 @@ export default function NavBar() {
                     icon={faUser}
                 />
                 <Link href="/">
-                    <Image src={logor} width={250} alt="logo da Fazenda Santo Antônio"
-                        className="rounded-full hidden md:block -mt-24"
+                    <Image src={logo} width={100} alt="logo da Fazenda Santo Antônio"
+                        className="rounded-full hidden md:block "
                     />
                 </Link>
                 <CustonLink
@@ -73,34 +72,14 @@ export default function NavBar() {
                     icon={faComments}
                 />
             </nav>
-            <nav className="hidden md:flex flex-wrap w-screen px-16 space-x-10 justify-center items-center bg-primary text-light py-2">
-                <Link href="#" className="hover:text-secondary transition-all duration-300">
-                    Queijo
+            <nav className="hidden md:flex flex-wrap w-screen px-16  justify-center items-center bg-primary text-secondary py-2">
+                <Link href="#" className="hover:text-light transition-all duration-300 px-5">
+                    Queijos
                 </Link>
-                <Link href="#" className="hover:text-secondary transition-all duration-300">
-                    Queijo
+                <Link href="#" className="hover:text-light transition-all duration-300 px-5">
+                    Doces
                 </Link>
-                <Link href="#" className="hover:text-secondary transition-all duration-300">
-                    Queijo
-                </Link>
-                <Link href="#" className="hover:text-secondary transition-all duration-300">
-                    Queijo
-                </Link>
-                <Link href="#" className="hover:text-secondary transition-all duration-300">
-                    Queijo
-                </Link>
-                <Link href="#" className="hover:text-secondary transition-all duration-300">
-                    Queijo
-                </Link>
-                <Link href="#" className="hover:text-secondary transition-all duration-300">
-                    Queijo
-                </Link>
-                <Link href="#" className="hover:text-secondary transition-all duration-300">
-                    Queijo
-                </Link>
-                <Link href="#" className="hover:text-secondary transition-all duration-300">
-                    Queijo
-                </Link>
+                
             </nav>
 
         </div>
