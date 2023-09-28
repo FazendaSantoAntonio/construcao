@@ -82,7 +82,7 @@ function DatabaseRead({ currentPage, itemsPerPage }) {
 
 
     return (
-        <div className='grid grid-cols-4 items-center justify-center gap-5 pb-10'>
+        <div className='grid grid-cols-1 md:grid-cols-4 items-center justify-center gap-5 pb-10'>
             {produto.map((item) => {
                 console.log(item.imagens)
                 if (Array.isArray(item.imagens) && item.imagens.length > 0) {

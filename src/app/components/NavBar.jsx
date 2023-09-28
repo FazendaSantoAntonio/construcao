@@ -19,7 +19,7 @@ const CustonLink = ({ title, icon, link }) => {
 export default function NavBar() {
     return (
         <div>
-            <div className="fixed flex justify-between items-center px-5 bg-light w-screen z-10 backdrop-blur-md top-0">
+            <div className="fixed flex justify-center md:justify-between items-center px-5 bg-light w-screen z-10 backdrop-blur-md top-0">
                 <div className="space-x-5 p-2 divide-primary/75 divide-x flex">
                     <Link href="https://www.instagram.com/queijofazendasantoantonio/"
                         target="_blank" className="text-black/75 hover:text-primary transition-all duration-300 flex justify-center items-center">
@@ -33,7 +33,10 @@ export default function NavBar() {
                     </Link>
                 </div>
                 <div>
-                    <Link href="https://wa.me/+553598647172" className="flex justify-center items-center hover:text-primary transition-all duration-300 text-black/75"><FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-2" />+55 35 9864-7172</Link>
+                    <Link href="https://wa.me/+553598647172" className="flex justify-center items-center hover:text-primary transition-all duration-300 text-black/75 ml-5">
+                        <FontAwesomeIcon icon={faWhatsapp} className="text-xl mr-2" />
+                        <p className="hidden md:block">+55 35 9864-7172</p>
+                    </Link>
                 </div>
             </div>
 
