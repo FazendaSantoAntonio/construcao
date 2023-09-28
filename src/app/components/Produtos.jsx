@@ -41,10 +41,10 @@ function StarRating({ rating }) {
 const Card = ({ foto, titulo, preco, precoav, ratings, }) => {
     const averageRating = calculateAverageRating(ratings);
     return (
-        <div className="text-primary flex flex-col justify-center items-center  w-64 bg-primary/20 rounded shadow-lg shadow-black/40">
+        <div className="text-primary flex flex-col justify-center items-center w-72 bg-primary/20 rounded shadow-lg shadow-black/40">
             <Image src={foto} alt={titulo} height={300} width={300} className="rounded" />
             <div className="mt-5 flex flex-col justify-center items-center">
-                <span className="font-bold text-xl">{titulo}</span>
+                <span className="font-bold text-xl text-center">{titulo}</span>
                 <StarRating rating={averageRating} />
                 <span className="font-bold text-xl text-orange-500">R${preco}</span>
                 <span>à vista R$ <span className="text-orange-500 font-bold">{precoav}</span></span>
@@ -90,7 +90,7 @@ function DatabaseRead({ currentPage, itemsPerPage }) {
                     return (
                         <Card
                             key={item.id}
-                            title={item.produto}
+                            titulo={item.produto}
                             preco={item.valor}
                             foto={primeiroLink}
                             ratings={item.avaliacao}
