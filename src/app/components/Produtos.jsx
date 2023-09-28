@@ -82,7 +82,7 @@ function DatabaseRead({ currentPage, itemsPerPage }) {
 
 
     return (
-        <div className='flex flex-wrap items-center justify-center gap-5 pb-10'>
+        <div className='grid grid-cols-4 items-center justify-center gap-5 pb-10'>
             {produto.map((item) => {
                 console.log(item.imagens)
                 if (Array.isArray(item.imagens) && item.imagens.length > 0) {
@@ -146,7 +146,7 @@ export default function Produtos() {
         <div className="flex flex-col justify-center items-center py-16 md:p-16">
 
             <h2 className="text-primary font-bold text-4xl">Produtos</h2>
-            <div className="mt-10 flex flex-wrap justify-center items-center w-[1200px] py-">
+            <div className="mt-10 flex flex-wrap justify-center items-center">
                 <DatabaseRead currentPage={currentPage} itemsPerPage={itemsPerPage} />
             </div>
             <Pagination
