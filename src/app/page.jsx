@@ -9,13 +9,13 @@ import Blog from "./components/Blog";
 export default function Home() {
   return (
     <div>
-      <div className="flex py-10 pl-5 md:pl-20 items-center relative">
-        <div className="md:h-[800px] flex flex-col justify-center w-44">
-          <h1 className="text-white font-black md:text-8xl text-2xl md:pt-10 md:px-10 md:pb-5 md:p-0 uppercase drop-shadow-dark0 ">
+      <div className="flex py-8 xl:py-0 pl-5 xl:pl-44 items-center relative">
+        <div className="xl:h-[800px] flex flex-col justify-center w-[700px]">
+          <h1 className="text-white font-black xl:text-8xl text-2xl md:pt-10  md:pb-5 md:p-0 uppercase drop-shadow-dark0 ">
           Queijos
-            <span className="text-secondary text-4xl md:text-8xl"> Artesanais </span>
+            <span className="text-secondary text-4xl xl:text-8xl"> Artesanais </span>
           </h1>
-          <h1 className="text-white font-black md:text-8xl text-2xl md:pt-10 md:px-10 md:pb-5 md:p-0 uppercase drop-shadow-dark0">
+          <h1 className="text-white font-black xl:text-8xl text-2xl  md:pb-5 md:p-0 uppercase drop-shadow-dark0">
             de Alagoa.
           </h1>
           <p className="hidden md:block text-primary/95 text-xl font-bold ml-5 md:mt-5 py-2 border-l border-primary pl-3 w-44 md:w-72">
