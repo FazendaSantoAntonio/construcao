@@ -41,7 +41,7 @@ function StarRating({ rating }) {
 const Card = ({ foto, titulo, preco, precoav, ratings, }) => {
     const averageRating = calculateAverageRating(ratings);
     return (
-        <div className="text-primary flex flex-col justify-center items-center w-72 bg-primary/20 rounded shadow-lg shadow-black/40">
+        <div className="text-primary flex flex-col justify-center items-center w-72 bg-primary/20  shadow-md shadow-black/30">
             <Image src={foto} alt={titulo} height={300} width={300} className="rounded" />
             <div className="mt-5 flex flex-col justify-center items-center">
                 <span className="font-bold text-xl text-center">{titulo}</span>
@@ -84,7 +84,6 @@ function DatabaseRead({ currentPage, itemsPerPage }) {
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center justify-center gap-5 pb-10'>
             {produto.map((item) => {
-                console.log(item.imagens)
                 if (Array.isArray(item.imagens) && item.imagens.length > 0) {
                     const primeiroLink = item.imagens[0];
                     return (
@@ -111,7 +110,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }) => {
                 <button
                     key={page}
                     onClick={() => setCurrentPage(page)}
-                    className={`px-4 py-2 rounded-full mr-2 
+                    className={`px-2 rounded-full mr-2 
            ${currentPage === page ? 'bg-primary text-white' : 'bg-white text-secondary hover:bg-secondary'}
          `}
                 >

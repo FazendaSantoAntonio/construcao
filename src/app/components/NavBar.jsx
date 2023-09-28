@@ -33,7 +33,9 @@ export default function NavBar() {
                     </Link>
                 </div>
                 <div>
-                    <Link href="https://wa.me/+553598647172" className="flex justify-center items-center hover:text-primary transition-all duration-300 text-black/75 ml-5">
+                    <Link href="https://wa.me/+553598647172" 
+                    target="_blank"
+                    className="flex justify-center items-center hover:text-primary transition-all duration-300 text-black/75 ml-5">
                         <FontAwesomeIcon icon={faWhatsapp} className="text-xl mr-2" />
                         <p className="hidden md:block">+55 35 9864-7172</p>
                     </Link>
