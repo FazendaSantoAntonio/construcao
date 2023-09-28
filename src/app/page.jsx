@@ -1,4 +1,5 @@
 import Image from "next/image";
+import queijobg from "../../public/queijobg.jpg"
 import Destaques from "./components/Destaques";
 import Promocao from "./components/Promocao";
 import Produtos from "./components/Produtos";
@@ -7,24 +8,31 @@ import Blog from "./components/Blog";
 
 export default function Home() {
   return (
-    <div className="">
-      <div className="w-screen md:h-[600px] flex flex-col justify-center items-start relative">
-        <h1 className="md:ml-32 text-primary font-black md:text-5xl text-2xl pt-10 px-10 pb-5 md:p-0 md:w-[500px] uppercase">
-          <span className="text-secondary">
-            Queijos </span> Artesanais de Alagoa.
-        </h1>
-        <p className="md:ml-32 ml-10 text-primary/95 md:mt-5 py-2 border-l border-primary pl-3 w-44 md:w-56">
-          Leve para Casa o Verdadeiro Sabor das Montanhas!
-        </p>
-        <button className="ml-10 md:ml-32 mt-10 flex justify-center items-center bg-primary text-secondary font-bold px-5 py-2 rounded border-2 border-secondary hover:text-primary hover:bg-secondary transition-all duration-300 mb-5">
-          Compre
-        </button>
-        {/* <Image src={queijo} alt="queijo" className="opacity-80 md w-full h-full absolute -z-10" /> */}
+    <div>
+      <div className="flex py-10 pl-5 md:pl-20 items-center relative">
+        <div className="md:h-[800px] flex flex-col justify-center w-44">
+          <h1 className="text-white font-black md:text-8xl text-2xl md:pt-10 md:px-10 md:pb-5 md:p-0 uppercase drop-shadow-dark0 ">
+          Queijos
+            <span className="text-secondary text-4xl md:text-8xl"> Artesanais </span>
+          </h1>
+          <h1 className="text-white font-black md:text-8xl text-2xl md:pt-10 md:px-10 md:pb-5 md:p-0 uppercase drop-shadow-dark0">
+            de Alagoa.
+          </h1>
+          <p className="hidden md:block text-primary/95 text-xl font-bold ml-5 md:mt-5 py-2 border-l border-primary pl-3 w-44 md:w-72">
+            Leve para Casa o Verdadeiro Sabor das Montanhas!
+          </p>
+          <button className="hidden md:flex mt-10 justify-center items-center bg-primary text-secondary font-bold px-5 py-2 rounded border-2 border-secondary hover:text-primary hover:bg-secondary transition-all duration-300 mb-5 w-44">
+            Compre
+          </button>
+        </div>
+        <div>
+          <Image src={queijobg} alt="queijo" className="left-0 top-0 absolute -z-10 opacity-90 " />
+        </div>
       </div>
       <Destaques />
       <Promocao />
       <Produtos />
       <Blog />
-    </div>
+    </div >
   )
 }
