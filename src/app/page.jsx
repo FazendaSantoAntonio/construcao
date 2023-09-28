@@ -9,8 +9,8 @@ import Blog from "./components/Blog";
 export default function Home() {
   return (
     <div>
-      <div className="flex py-8 xl:py-0 pl-5 xl:pl-44 items-center relative">
-        <div className="xl:h-[800px] flex flex-col justify-center w-[700px]">
+      <div className="flex py-10 xl:py-0 pl-5 xl:pl-44 items-center relative">
+        <div className="xl:h-[800px] flex flex-col justify-center w-44 xl:w-[700px]">
           <h1 className="text-white font-black xl:text-8xl text-2xl md:pt-10  md:pb-5 md:p-0 uppercase drop-shadow-dark0 ">
           Queijos
             <span className="text-secondary text-4xl xl:text-8xl"> Artesanais </span>
